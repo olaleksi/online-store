@@ -208,7 +208,7 @@ input{
 
     .settings-submenu{
         
-        display: none;
+        display: block;
         
     }
 
