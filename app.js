@@ -8,25 +8,58 @@ const xicon = document.querySelector('.xicon');
 const arrowDown = document.querySelector('.arrow-down');
 const arrowUp = document.querySelector('.arrow-up')
 const setupMenu = document.querySelector('.settings');
-const setting = document.querySelectorAll('.setting');
-const set1 = document.querySelector('.set1');
-const set2 = document.querySelector('.set2');
-const set3 = document.querySelector('.set3');
-const set4 = document.querySelector('.set4');
-const set5 = document.querySelector('.set5');
+const settingsSubMenu = document.querySelector('.settings-submenu');
+
+
+
+/*let currentlyOpenedContentId = null;
+
+function toggleContent(childNumber){
+    const contentId = `content${childNumber}`;
+
+
+    if(currentlyOpenedContentId !== null){
+        document.getElementById(currentlyOpenedContentId).style.display = 'none';
+    }
+
+    const content = document.getElementById(contentId);
+    content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+
+    currentlyOpenedContentId = content.style.display === 'block' ? contentId : null;
+}
+toggleContent(1)*/
+
+
+function toggleContent(childNumber) {
+    const content = document.getElementById(`content${childNumber}`);
+    const setting = document.querySelector(`.setting${childNumber}`);
+
+    // Hide all contents
+    document.querySelectorAll('.child-content').forEach(item => {
+      item.style.display = 'none';
+    });
+
+    // Remove 'opened' class from all children
+    document.querySelectorAll('.child').forEach(item => {
+      item.classList.remove('opened');
+    });
+
+    // Toggle the current content
+    content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+
+    // Add 'opened' class to the clicked child
+    if(setting.classList.contains('opened')){
+        setting.classList.add('opened');
+    }
+
+   
+    
+  }
+toggleContent(1)
 
 
 
 
-
-
-const set = [set1, set2, set3, set4, set5]
-
-set.forEach((sets) =>{
-    sets.addEventListener('click', ()=>{
-        setting.classList.toggle('submenu-active')
-    } )
-})
 
 
 
