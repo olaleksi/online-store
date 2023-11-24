@@ -18,9 +18,13 @@
                 <a  rel="noopener" href="https://shopify.com">
                     <img class="nav-bag" src="https://crushingit.tech/hackathon-assets/shopify-icon.svg" alt="">
                 </a>
-               
-                <input placeholder="Search" id="search-bar" type="search" class="search-input">
-                <img class="search-icon" src="./searchicon.png" alt="">
+
+
+               <div class="search">
+                    <input placeholder="Search" id="search-bar" type="search" class="search-input">
+                    <img class="search-icon" src="./searchicon.png" alt="">
+               </div>
+                
             </div>
             
             <div class="notificationbell-storename">
@@ -86,8 +90,11 @@
         <!--extend guideline-->
         <div class="select-plan-container">
             <p>Extend your trial for $1/month for 3 months on select plans.</p>
-            <button class="plan-button" type="button"><a rel="noopener" href="https://shopify.com/pricing">Select a plan</a></button>
-            <img class="xicon" src="./Iconxicon.png" alt="">
+            <div class="btn-x">
+                <button class="plan-button" type="button"><a rel="noopener" href="https://shopify.com/pricing">Select a plan</a></button>
+                <img class="xicon" src="./Iconxicon.png" alt="">
+            </div>
+            
         </div>
 
 
@@ -106,9 +113,9 @@
 
             <div class="settings">
                 <!--setting 1-->
-                <div class="setting settings-stylying submenu-active">
-                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b class="set1">Customize your online store</b></div>
-                    <div class="settings1-submenu  pd">
+                <div class="setting1 opened settings-stylying">
+                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b onclick="toggleContent(1)" class="child child1">Customize your online store</b></div>
+                    <div id="content1" class="settings1-submenu child-content  pd">
                         <p>
                             Choose a theme and add your logo, colors,
                             and images to reflect your brand.
@@ -120,9 +127,9 @@
                 </div>
 
                 <!--setting 2-->
-                <div class="setting settings-stylying">
-                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b class="set2">Add your first product</b></div>
-                    <div class="settings2-submenu settings-submenu pd">
+                <div class="setting2 settings-stylying">
+                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b onclick="toggleContent(2)" class="child child2">Add your first product</b></div>
+                    <div id="content2" class="settings2-submenu child-content  pd">
                         <p>
                             Write a description, add photos, and set pricing
                             for the products you plan to sell.
@@ -138,9 +145,9 @@
                 </div>
                
                 <!--setting 3-->
-                <div class="setting settings-stylying">
-                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b class="set3">Add a custom domain</b></div>
-                    <div class="settings3-submenu settings-submenu pd">
+                <div class="setting3 settings-stylying">
+                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b onclick="toggleContent(3)" class="child child3">Add a custom domain</b></div>
+                    <div id="content3" class="settings3-submenu child-content  pd">
                         <p>Your current domain is 222219.myshopify.com but
                            you can add a custom domain to help customers find your online store.
                         <a rel="noopener" href="https://help.shopify.com/en/manual/domains" target="_blank">Learn more</a>
@@ -151,9 +158,9 @@
                 </div>
 
                 <!--setting 4-->
-                <div class="setting settings-stylying">
-                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b class="set4">Name your store</b></div>
-                    <div class="settings4-submenu settings-submenu pd">
+                <div class="setting4 settings-stylying">
+                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b onclick="toggleContent(4)" class="child child4">Name your store</b></div>
+                    <div id="content4" class="settings4-submenu child-content  pd">
                         <p>Your temporary store name is currently Davii collections.
                             The store name appears in your
                             admin and your online store.
@@ -168,9 +175,9 @@
                 </div>
 
                 <!--setting 5-->
-                <div class="setting settings-stylying">
-                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b class="set5">Set up a payment provider</b></div>
-                    <div class="settings5-submenu settings-submenu pd">
+                <div class="setting5 settings-stylying">
+                    <div class="elipse"><img class="dotted-circle" src="./Ellipse.png" alt=""><b onclick="toggleContent(5)" class="child child5">Set up a payment provider</b></div>
+                    <div id="content5" class="settings5-submenu child-content  pd">
                         <p>Choose a payment provider to start accepting payments. You’ll need to create an account with the payment provider and
                         set it up with your Shopify store. Learn more
                             <a rel="noopener"
