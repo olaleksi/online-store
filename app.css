@@ -23,6 +23,12 @@ a {
     margin: 0px auto;
 }
 
+.nav-bag{
+    content: url("https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg");
+}
+
+
+
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -42,8 +48,16 @@ a {
 .bag-search-container {
     display: flex;
     align-items: center;
-    gap: 480px;
+    gap: 400px;
     padding: 0px 10px;
+}
+
+.search-input:focus-visible{
+    outline-color: white;
+    outline-style: 1px solid;
+}
+.search-input:hover{
+    border: 1px solid white;
 }
 
 input {
@@ -58,8 +72,8 @@ input {
 .notificationbell-storename {
     display: flex;
     align-items: center;
-    gap: 150px;
-    padding: 0px 20px;
+    gap: 10px;
+    padding: 0px 10px;
 }
 
 .notification-bell {
@@ -69,15 +83,62 @@ input {
     background: #303030;
     padding: 10px;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.notification-bell:hover{
+    background-color: #616161;
 }
 
 .dc {
     position: relative;
+        /* background: #36fba1; */
+        /* padding: 5px 5px; */
+        /* border-radius: 5px; */
+        /* color: #26b071; */
+        /* font-size: 12px; */
+        display: flex;
+        align-items: baseline;
+        cursor: pointer;
+}
+
+
+.dc-text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dc-green{
     background: #36fba1;
-    padding: 5px 5px;
-    border-radius: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #26b071;
+        font-size: 14px;
+}
+
+.dc > p{
+    
+    background: #36fba1;
+    padding: 8px 5px;
+    border-radius: 6px;
     color: #26b071;
-    font-size: 12px;
+    font-size: 14px;
+}
+
+.davii {
+    background: #303030;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    margin-right: -15px;
+    
+    
+}
+
+.davii:hover{
+    background-color: #616161;
 }
 
 .alert-container {
@@ -328,6 +389,14 @@ input {
     border-radius: 10px;
 }
 
+.settings-btn:hover{
+    background-color: #2A2A2A;
+}
+
+.settings-btn:active{
+    background-color: #2B2B2B;
+}
+
 .double-buttons-container {
     display: flex;
     flex-direction: row;
@@ -397,12 +466,16 @@ input {
             align-items: center;
             flex-wrap: nowrap;
             background: #1a1a1a;
-            padding: 15px 0px;
+            padding: 15px 15px;
             margin-bottom: 0;
         }
     
         .search {
             position: relative;
+        }
+
+        .nav-bag {
+            content: url("https://crushingit.tech/hackathon-assets/shopify-icon.svg");
         }
     
         .bag-search-container {
@@ -434,16 +507,26 @@ input {
             position: relative;
             display: flex;
             align-items: center;
+            background: #303030;
+            padding: 0px;
+            border-radius: 0px;
         }
     
         .dc {
             position: relative;
-            background: #36fba1;
-            padding: 5px 5px;
-            border-radius: 5px;
-            color: #26b071;
-            font-size: 12px;
+            /* background: #36fba1; */
+            /* padding: 5px 5px; */
+            /* border-radius: 5px; */
+            /* color: #26b071; */
+            /* font-size: 12px; */
+            display: block;
+            
         }
+
+        .davii{
+            display: none;
+        }
+        
     
         .alert-container {
             display: none;
